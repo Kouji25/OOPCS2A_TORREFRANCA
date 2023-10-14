@@ -35,6 +35,7 @@ Partial Class Form1
         ' 
         ' GroupBox1
         ' 
+        GroupBox1.BackColor = Color.LightBlue
         GroupBox1.Controls.Add(Label3)
         GroupBox1.Controls.Add(btnInsert)
         GroupBox1.Controls.Add(txtCourse)
@@ -42,9 +43,9 @@ Partial Class Form1
         GroupBox1.Controls.Add(txtFName)
         GroupBox1.Controls.Add(Label2)
         GroupBox1.Controls.Add(Label1)
-        GroupBox1.Location = New Point(35, 42)
+        GroupBox1.Location = New Point(40, 43)
         GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(239, 187)
+        GroupBox1.Size = New Size(273, 217)
         GroupBox1.TabIndex = 0
         GroupBox1.TabStop = False
         GroupBox1.Text = "Save Records"
@@ -52,66 +53,73 @@ Partial Class Form1
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Location = New Point(22, 95)
+        Label3.Location = New Point(25, 108)
         Label3.Name = "Label3"
-        Label3.Size = New Size(44, 15)
+        Label3.Size = New Size(53, 17)
         Label3.TabIndex = 2
         Label3.Text = "Course"
         ' 
         ' btnInsert
         ' 
-        btnInsert.Location = New Point(61, 130)
+        btnInsert.BackColor = Color.SteelBlue
+        btnInsert.FlatStyle = FlatStyle.Flat
+        btnInsert.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnInsert.ForeColor = SystemColors.ControlLightLight
+        btnInsert.Location = New Point(70, 147)
         btnInsert.Name = "btnInsert"
-        btnInsert.Size = New Size(107, 23)
+        btnInsert.Size = New Size(122, 26)
         btnInsert.TabIndex = 5
         btnInsert.Text = "Save Record"
-        btnInsert.UseVisualStyleBackColor = True
+        btnInsert.UseVisualStyleBackColor = False
         ' 
         ' txtCourse
         ' 
-        txtCourse.Location = New Point(103, 92)
+        txtCourse.Location = New Point(118, 104)
         txtCourse.Name = "txtCourse"
-        txtCourse.Size = New Size(100, 23)
+        txtCourse.Size = New Size(114, 23)
         txtCourse.TabIndex = 4
         ' 
         ' txtLName
         ' 
-        txtLName.Location = New Point(103, 61)
+        txtLName.Location = New Point(118, 69)
         txtLName.Name = "txtLName"
-        txtLName.Size = New Size(100, 23)
+        txtLName.Size = New Size(114, 23)
         txtLName.TabIndex = 3
         ' 
         ' txtFName
         ' 
-        txtFName.Location = New Point(103, 29)
+        txtFName.BackColor = Color.White
+        txtFName.Location = New Point(118, 33)
         txtFName.Name = "txtFName"
-        txtFName.Size = New Size(100, 23)
+        txtFName.Size = New Size(114, 23)
         txtFName.TabIndex = 2
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(22, 64)
+        Label2.Location = New Point(25, 73)
         Label2.Name = "Label2"
-        Label2.Size = New Size(63, 15)
+        Label2.Size = New Size(77, 17)
         Label2.TabIndex = 1
         Label2.Text = "Last Name"
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(22, 32)
+        Label1.Location = New Point(25, 36)
         Label1.Name = "Label1"
-        Label1.Size = New Size(64, 15)
+        Label1.Size = New Size(75, 17)
         Label1.TabIndex = 0
         Label1.Text = "First Name"
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        BackColor = Color.SkyBlue
+        ClientSize = New Size(354, 307)
         Controls.Add(GroupBox1)
+        Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
