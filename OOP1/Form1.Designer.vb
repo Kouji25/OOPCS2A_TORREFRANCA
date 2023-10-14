@@ -23,13 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         GroupBox1 = New GroupBox()
-        Label1 = New Label()
-        Label2 = New Label()
         Label3 = New Label()
-        txtFName = New TextBox()
-        txtLName = New TextBox()
-        txtCourse = New TextBox()
         btnInsert = New Button()
+        txtCourse = New TextBox()
+        txtLName = New TextBox()
+        txtFName = New TextBox()
+        Label2 = New Label()
+        Label1 = New Label()
         GroupBox1.SuspendLayout()
         SuspendLayout()
         ' 
@@ -49,14 +49,44 @@ Partial Class Form1
         GroupBox1.TabStop = False
         GroupBox1.Text = "Save Records"
         ' 
-        ' Label1
+        ' Label3
         ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(22, 32)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(64, 15)
-        Label1.TabIndex = 0
-        Label1.Text = "First Name"
+        Label3.AutoSize = True
+        Label3.Location = New Point(22, 95)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(44, 15)
+        Label3.TabIndex = 2
+        Label3.Text = "Course"
+        ' 
+        ' btnInsert
+        ' 
+        btnInsert.Location = New Point(61, 130)
+        btnInsert.Name = "btnInsert"
+        btnInsert.Size = New Size(107, 23)
+        btnInsert.TabIndex = 5
+        btnInsert.Text = "Save Record"
+        btnInsert.UseVisualStyleBackColor = True
+        ' 
+        ' txtCourse
+        ' 
+        txtCourse.Location = New Point(103, 92)
+        txtCourse.Name = "txtCourse"
+        txtCourse.Size = New Size(100, 23)
+        txtCourse.TabIndex = 4
+        ' 
+        ' txtLName
+        ' 
+        txtLName.Location = New Point(103, 61)
+        txtLName.Name = "txtLName"
+        txtLName.Size = New Size(100, 23)
+        txtLName.TabIndex = 3
+        ' 
+        ' txtFName
+        ' 
+        txtFName.Location = New Point(103, 29)
+        txtFName.Name = "txtFName"
+        txtFName.Size = New Size(100, 23)
+        txtFName.TabIndex = 2
         ' 
         ' Label2
         ' 
@@ -67,44 +97,14 @@ Partial Class Form1
         Label2.TabIndex = 1
         Label2.Text = "Last Name"
         ' 
-        ' Label3
+        ' Label1
         ' 
-        Label3.AutoSize = True
-        Label3.Location = New Point(22, 95)
-        Label3.Name = "Label3"
-        Label3.Size = New Size(44, 15)
-        Label3.TabIndex = 2
-        Label3.Text = "Course"
-        ' 
-        ' txtFName
-        ' 
-        txtFName.Location = New Point(103, 29)
-        txtFName.Name = "txtFName"
-        txtFName.Size = New Size(100, 23)
-        txtFName.TabIndex = 2
-        ' 
-        ' txtLName
-        ' 
-        txtLName.Location = New Point(103, 61)
-        txtLName.Name = "txtLName"
-        txtLName.Size = New Size(100, 23)
-        txtLName.TabIndex = 3
-        ' 
-        ' txtCourse
-        ' 
-        txtCourse.Location = New Point(103, 92)
-        txtCourse.Name = "txtCourse"
-        txtCourse.Size = New Size(100, 23)
-        txtCourse.TabIndex = 4
-        ' 
-        ' btnInsert
-        ' 
-        btnInsert.Location = New Point(61, 130)
-        btnInsert.Name = "btnInsert"
-        btnInsert.Size = New Size(107, 23)
-        btnInsert.TabIndex = 5
-        btnInsert.Text = "Save Record"
-        btnInsert.UseVisualStyleBackColor = True
+        Label1.AutoSize = True
+        Label1.Location = New Point(22, 32)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(64, 15)
+        Label1.TabIndex = 0
+        Label1.Text = "First Name"
         ' 
         ' Form1
         ' 
