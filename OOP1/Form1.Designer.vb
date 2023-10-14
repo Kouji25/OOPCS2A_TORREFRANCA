@@ -30,7 +30,18 @@ Partial Class Form1
         txtFName = New TextBox()
         Label2 = New Label()
         Label1 = New Label()
+        GroupBox2 = New GroupBox()
+        Label7 = New Label()
+        txtUserID = New TextBox()
+        Label4 = New Label()
+        btnSearch = New Button()
+        txtCourseSearch = New TextBox()
+        txtLNameSearch = New TextBox()
+        txtFNameSearch = New TextBox()
+        Label5 = New Label()
+        Label6 = New Label()
         GroupBox1.SuspendLayout()
+        GroupBox2.SuspendLayout()
         SuspendLayout()
         ' 
         ' GroupBox1
@@ -112,18 +123,119 @@ Partial Class Form1
         Label1.TabIndex = 0
         Label1.Text = "First Name"
         ' 
+        ' GroupBox2
+        ' 
+        GroupBox2.BackColor = Color.LightBlue
+        GroupBox2.Controls.Add(Label7)
+        GroupBox2.Controls.Add(txtUserID)
+        GroupBox2.Controls.Add(Label4)
+        GroupBox2.Controls.Add(btnSearch)
+        GroupBox2.Controls.Add(txtCourseSearch)
+        GroupBox2.Controls.Add(txtLNameSearch)
+        GroupBox2.Controls.Add(txtFNameSearch)
+        GroupBox2.Controls.Add(Label5)
+        GroupBox2.Controls.Add(Label6)
+        GroupBox2.Location = New Point(331, 43)
+        GroupBox2.Name = "GroupBox2"
+        GroupBox2.Size = New Size(273, 217)
+        GroupBox2.TabIndex = 6
+        GroupBox2.TabStop = False
+        GroupBox2.Text = "Search Records"
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(38, 36)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(74, 17)
+        Label7.TabIndex = 7
+        Label7.Text = "Student ID"
+        ' 
+        ' txtUserID
+        ' 
+        txtUserID.BackColor = Color.White
+        txtUserID.Location = New Point(129, 33)
+        txtUserID.Name = "txtUserID"
+        txtUserID.Size = New Size(114, 23)
+        txtUserID.TabIndex = 6
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(36, 142)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(53, 17)
+        Label4.TabIndex = 2
+        Label4.Text = "Course"
+        ' 
+        ' btnSearch
+        ' 
+        btnSearch.BackColor = Color.SteelBlue
+        btnSearch.FlatStyle = FlatStyle.Flat
+        btnSearch.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnSearch.ForeColor = SystemColors.ControlLightLight
+        btnSearch.Location = New Point(70, 172)
+        btnSearch.Name = "btnSearch"
+        btnSearch.Size = New Size(122, 26)
+        btnSearch.TabIndex = 5
+        btnSearch.Text = "Search Record"
+        btnSearch.UseVisualStyleBackColor = False
+        ' 
+        ' txtCourseSearch
+        ' 
+        txtCourseSearch.Location = New Point(129, 138)
+        txtCourseSearch.Name = "txtCourseSearch"
+        txtCourseSearch.Size = New Size(114, 23)
+        txtCourseSearch.TabIndex = 4
+        ' 
+        ' txtLNameSearch
+        ' 
+        txtLNameSearch.Location = New Point(129, 103)
+        txtLNameSearch.Name = "txtLNameSearch"
+        txtLNameSearch.Size = New Size(114, 23)
+        txtLNameSearch.TabIndex = 3
+        ' 
+        ' txtFNameSearch
+        ' 
+        txtFNameSearch.BackColor = Color.White
+        txtFNameSearch.Location = New Point(129, 67)
+        txtFNameSearch.Name = "txtFNameSearch"
+        txtFNameSearch.Size = New Size(114, 23)
+        txtFNameSearch.TabIndex = 2
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(36, 107)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(77, 17)
+        Label5.TabIndex = 1
+        Label5.Text = "Last Name"
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Point(36, 70)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(75, 17)
+        Label6.TabIndex = 0
+        Label6.Text = "First Name"
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SkyBlue
-        ClientSize = New Size(354, 307)
+        ClientSize = New Size(639, 312)
+        Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         Name = "Form1"
         Text = "Form1"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
+        GroupBox2.ResumeLayout(False)
+        GroupBox2.PerformLayout()
         ResumeLayout(False)
     End Sub
 
@@ -135,4 +247,14 @@ Partial Class Form1
     Friend WithEvents txtCourse As TextBox
     Friend WithEvents txtLName As TextBox
     Friend WithEvents txtFName As TextBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents txtUserID As TextBox
+    Friend WithEvents Label4 As Label
+    Private WithEvents btnSearch As Button
+    Friend WithEvents txtCourseSearch As TextBox
+    Friend WithEvents txtLNameSearch As TextBox
+    Friend WithEvents txtFNameSearch As TextBox
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class
