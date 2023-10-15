@@ -11,7 +11,6 @@ Module Module1
     Dim host, uname, pwd, dbname As String
     Dim sqlquery As String
 
-
     Public Sub ConnectDbase()
         host = "127.0.0.1"
         dbname = "cs2aoop"
@@ -29,12 +28,10 @@ Module Module1
 
             End Try
 
-
         End If
     End Sub
 
     Public Sub SaveRecord()
-
 
         Dim fname = Form1.txtFName.Text
         Dim lname = Form1.txtLName.Text
@@ -71,9 +68,6 @@ Module Module1
         uid = Form1.txtUserID.Text
         mysqlcmd.Parameters.AddWithValue("@uid", uid)
 
-
-
-
         Try
             reader = mysqlcmd.ExecuteReader
             If reader.Read Then
@@ -91,11 +85,6 @@ Module Module1
 
         End Try
 
-
-
     End Sub
-
-
-
 
 End Module

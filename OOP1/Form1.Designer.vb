@@ -231,7 +231,7 @@ Partial Class Form1
         Controls.Add(GroupBox1)
         Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
         Name = "Form1"
-        Text = "Form1"
+        Text = "Student Records"
         GroupBox1.ResumeLayout(False)
         GroupBox1.PerformLayout()
         GroupBox2.ResumeLayout(False)
