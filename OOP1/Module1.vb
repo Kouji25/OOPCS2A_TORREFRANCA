@@ -10,6 +10,8 @@ Module Module1
     Dim mysqlcmd As New MySqlCommand
     Dim host, uname, pwd, dbname As String
     Dim sqlquery As String
+    Dim dbTable As New DataTable
+    Dim adapter As New MySqlDataAdapter
 
     Public Sub ConnectDbase()
         host = "127.0.0.1"
@@ -85,6 +87,33 @@ Module Module1
 
         End Try
 
+    End Sub
+
+    Public Sub LoadAllData()
+        sqlquery = "SELECT * FROM students"
+        adapter = New MySqlDataAdapter(sqlquery, con)
+
+
+        Try
+
+
+            'display the record in your datagridview
+            dbTable = New DataTable
+            adapter.Fill(dbTable)
+
+            With Form2.dgvData
+                .DataSource = dbTable
+                .AutoResizeColumns()
+
+            End With
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            con.Close()
+
+        End Try
     End Sub
 
 End Module
