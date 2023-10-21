@@ -32,48 +32,60 @@ Partial Class Form2
         ' cboCourse
         ' 
         cboCourse.FormattingEnabled = True
-        cboCourse.Location = New Point(67, 101)
+        cboCourse.Location = New Point(69, 68)
         cboCourse.Name = "cboCourse"
-        cboCourse.Size = New Size(214, 23)
+        cboCourse.Size = New Size(202, 25)
         cboCourse.TabIndex = 0
         ' 
         ' btnDisplay
         ' 
-        btnDisplay.Location = New Point(368, 101)
+        btnDisplay.BackColor = Color.SteelBlue
+        btnDisplay.FlatStyle = FlatStyle.Flat
+        btnDisplay.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        btnDisplay.ForeColor = Color.White
+        btnDisplay.Location = New Point(292, 62)
         btnDisplay.Name = "btnDisplay"
-        btnDisplay.Size = New Size(132, 40)
+        btnDisplay.Size = New Size(130, 34)
         btnDisplay.TabIndex = 1
         btnDisplay.Text = "Display"
-        btnDisplay.UseVisualStyleBackColor = True
+        btnDisplay.UseVisualStyleBackColor = False
         ' 
         ' dgvData
         ' 
+        dgvData.BackgroundColor = Color.LightBlue
         dgvData.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        dgvData.Location = New Point(67, 147)
+        dgvData.GridColor = Color.LightBlue
+        dgvData.Location = New Point(69, 119)
         dgvData.Name = "dgvData"
         dgvData.RowTemplate.Height = 25
-        dgvData.Size = New Size(436, 234)
+        dgvData.Size = New Size(353, 250)
         dgvData.TabIndex = 2
         ' 
         ' btnBack
         ' 
-        btnBack.Location = New Point(254, 421)
+        btnBack.BackColor = Color.SteelBlue
+        btnBack.FlatStyle = FlatStyle.Flat
+        btnBack.Font = New Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point)
+        btnBack.ForeColor = Color.White
+        btnBack.Location = New Point(195, 398)
         btnBack.Name = "btnBack"
-        btnBack.Size = New Size(75, 23)
+        btnBack.Size = New Size(108, 42)
         btnBack.TabIndex = 3
         btnBack.Text = "Home"
-        btnBack.UseVisualStyleBackColor = True
+        btnBack.UseVisualStyleBackColor = False
         ' 
         ' Form2
         ' 
-        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleDimensions = New SizeF(7F, 17F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(653, 502)
+        BackColor = Color.SkyBlue
+        ClientSize = New Size(496, 497)
         ControlBox = False
         Controls.Add(btnBack)
         Controls.Add(dgvData)
         Controls.Add(btnDisplay)
         Controls.Add(cboCourse)
+        Font = New Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point)
         Name = "Form2"
         Text = "Form2"
         CType(dgvData, ComponentModel.ISupportInitialize).EndInit()
