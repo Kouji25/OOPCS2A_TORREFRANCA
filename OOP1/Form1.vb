@@ -15,4 +15,10 @@
         SearchData()
 
     End Sub
+
+    Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
+        Form2.Show()
+        Me.Hide()
+    End Sub
+
 End Class

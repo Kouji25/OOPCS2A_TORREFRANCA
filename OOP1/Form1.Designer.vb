@@ -40,6 +40,7 @@ Partial Class Form1
         txtFNameSearch = New TextBox()
         Label5 = New Label()
         Label6 = New Label()
+        btnDisplay = New Button()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         SuspendLayout()
@@ -221,12 +222,22 @@ Partial Class Form1
         Label6.TabIndex = 0
         Label6.Text = "First Name"
         ' 
+        ' btnDisplay
+        ' 
+        btnDisplay.Location = New Point(244, 290)
+        btnDisplay.Name = "btnDisplay"
+        btnDisplay.Size = New Size(151, 38)
+        btnDisplay.TabIndex = 7
+        btnDisplay.Text = "Display By Course"
+        btnDisplay.UseVisualStyleBackColor = True
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SkyBlue
-        ClientSize = New Size(639, 312)
+        ClientSize = New Size(640, 474)
+        Controls.Add(btnDisplay)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
         Font = New Font("Century Gothic", 9.75F, FontStyle.Regular, GraphicsUnit.Point)
@@ -257,4 +268,5 @@ Partial Class Form1
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents btnDisplay As Button
 End Class
