@@ -68,3 +68,4 @@ C:\Users\ITLAB-38\Source\Repos\Kouji727\OOPCS2A_TORREFRANCA\OOP1\obj\Debug\net6.
 C:\Users\ITLAB-38\Source\Repos\Kouji727\OOPCS2A_TORREFRANCA\OOP1\obj\Debug\net6.0-windows\OOP1.pdb
 C:\Users\ITLAB-38\Source\Repos\Kouji727\OOPCS2A_TORREFRANCA\OOP1\obj\Debug\net6.0-windows\OOP1.genruntimeconfig.cache
 C:\Users\ITLAB-38\Source\Repos\Kouji727\OOPCS2A_TORREFRANCA\OOP1\obj\Debug\net6.0-windows\ref\OOP1.dll
+C:\Users\ITLAB-38\Source\Repos\Kouji727\OOPCS2A_TORREFRANCA\OOP1\obj\Debug\net6.0-windows\OOP1.Form2.resources
