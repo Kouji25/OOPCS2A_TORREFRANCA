@@ -224,19 +224,23 @@ Partial Class Form1
         ' 
         ' btnDisplay
         ' 
+        btnDisplay.BackColor = Color.SteelBlue
+        btnDisplay.FlatStyle = FlatStyle.Flat
+        btnDisplay.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnDisplay.ForeColor = Color.White
         btnDisplay.Location = New Point(244, 290)
         btnDisplay.Name = "btnDisplay"
         btnDisplay.Size = New Size(151, 38)
         btnDisplay.TabIndex = 7
         btnDisplay.Text = "Display By Course"
-        btnDisplay.UseVisualStyleBackColor = True
+        btnDisplay.UseVisualStyleBackColor = False
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SkyBlue
-        ClientSize = New Size(640, 474)
+        ClientSize = New Size(640, 368)
         Controls.Add(btnDisplay)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)

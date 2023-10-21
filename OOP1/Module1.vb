@@ -111,7 +111,7 @@ Module Module1
         Catch ex As Exception
             MsgBox(ex.Message)
         Finally
-            con.Close()
+            'con.Close()
 
         End Try
     End Sub
