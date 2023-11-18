@@ -76,6 +76,11 @@ Module Module1
                 Form1.txtFNameSearch.Text = reader("studFname").ToString
                 Form1.txtLNameSearch.Text = reader("studLname").ToString
                 Form1.txtCourseSearch.Text = reader("course").ToString
+                Form1.btnUpdate.Enabled = True
+                Form1.btnDelete.Enabled = True
+                Form1.txtFName.Enabled = True
+                Form1.txtLName.Enabled = True
+                Form1.txtCourse.Enabled = True
             Else
                 MsgBox("No Record")
             End If
@@ -157,6 +162,34 @@ Module Module1
             MsgBox(ex.Message)
         Finally
             con.Close()
+
+        End Try
+    End Sub
+
+    Public Sub UpdateRecord(studid As String, fname As String, lname As String, course As String)
+
+        sqlquery = "UPDATE students  set studFname = @fname, studLname = @lname, course = @course WHERE studid = @studid"
+
+        Try
+            Using cmd As New MySqlCommand(sqlquery, con)
+                cmd.Parameters.AddWithValue("@fname", fname)
+                cmd.Parameters.AddWithValue("@lname", lname)
+                cmd.Parameters.AddWithValue("@course", course)
+                cmd.Parameters.AddWithValue("@studid", studid)
+
+                cmd.ExecuteNonQuery()
+
+            End Using
+
+            MsgBox("Update Successful", vbInformation, "Update Message")
+
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, vbInformation, "Error Message")
+        Finally
+            Form1.txtFName.Clear()
+            Form1.txtLName.Clear()
+            Form1.txtCourse.Clear()
+            Form1.txtUserID.Clear()
 
         End Try
     End Sub
