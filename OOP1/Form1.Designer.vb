@@ -41,6 +41,8 @@ Partial Class Form1
         Label5 = New Label()
         Label6 = New Label()
         btnDisplay = New Button()
+        btnUpdate = New Button()
+        btnDelete = New Button()
         GroupBox1.SuspendLayout()
         GroupBox2.SuspendLayout()
         SuspendLayout()
@@ -77,7 +79,7 @@ Partial Class Form1
         btnInsert.FlatStyle = FlatStyle.Flat
         btnInsert.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
         btnInsert.ForeColor = SystemColors.ControlLightLight
-        btnInsert.Location = New Point(70, 147)
+        btnInsert.Location = New Point(69, 172)
         btnInsert.Name = "btnInsert"
         btnInsert.Size = New Size(122, 26)
         btnInsert.TabIndex = 5
@@ -235,12 +237,40 @@ Partial Class Form1
         btnDisplay.Text = "Display By Course"
         btnDisplay.UseVisualStyleBackColor = False
         ' 
+        ' btnUpdate
+        ' 
+        btnUpdate.BackColor = Color.SteelBlue
+        btnUpdate.FlatStyle = FlatStyle.Flat
+        btnUpdate.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnUpdate.ForeColor = Color.White
+        btnUpdate.Location = New Point(40, 290)
+        btnUpdate.Name = "btnUpdate"
+        btnUpdate.Size = New Size(151, 38)
+        btnUpdate.TabIndex = 8
+        btnUpdate.Text = "Update"
+        btnUpdate.UseVisualStyleBackColor = False
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.BackColor = Color.SteelBlue
+        btnDelete.FlatStyle = FlatStyle.Flat
+        btnDelete.Font = New Font("Century Gothic", 9.75F, FontStyle.Bold, GraphicsUnit.Point)
+        btnDelete.ForeColor = Color.White
+        btnDelete.Location = New Point(453, 290)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(151, 38)
+        btnDelete.TabIndex = 9
+        btnDelete.Text = "Delete"
+        btnDelete.UseVisualStyleBackColor = False
+        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 17F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.SkyBlue
-        ClientSize = New Size(640, 368)
+        ClientSize = New Size(640, 373)
+        Controls.Add(btnDelete)
+        Controls.Add(btnUpdate)
         Controls.Add(btnDisplay)
         Controls.Add(GroupBox2)
         Controls.Add(GroupBox1)
@@ -273,4 +303,6 @@ Partial Class Form1
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents btnDisplay As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnDelete As Button
 End Class

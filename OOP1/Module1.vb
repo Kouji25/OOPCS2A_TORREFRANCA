@@ -39,7 +39,7 @@ Module Module1
         Dim lname = Form1.txtLName.Text
         Dim course = Form1.txtCourse.Text
 
-        sqlquery = "INSERT INTO students(studFName, studLName, Course) VALUES (@fname, @lname, @course)"
+        sqlquery = "INSERT INTO students(studFname, studLname, course) VALUES (@fname, @lname, @course)"
 
         mysqlcmd = New MySqlCommand(sqlquery, con)
 
@@ -65,7 +65,7 @@ Module Module1
 
         Dim uid As String
 
-        sqlquery = "SELECT * FROM students WHERE studID = @uid"
+        sqlquery = "SELECT * FROM students WHERE studid = @uid"
         mysqlcmd = New MySqlCommand(sqlquery, con)
         uid = Form1.txtUserID.Text
         mysqlcmd.Parameters.AddWithValue("@uid", uid)
@@ -73,15 +73,16 @@ Module Module1
         Try
             reader = mysqlcmd.ExecuteReader
             If reader.Read Then
-                Form1.txtFNameSearch.Text = reader("StudFName").ToString
-                Form1.txtLNameSearch.Text = reader("StudLName").ToString
-                Form1.txtCourseSearch.Text = reader("Course").ToString
+                Form1.txtFNameSearch.Text = reader("studFname").ToString
+                Form1.txtLNameSearch.Text = reader("studLname").ToString
+                Form1.txtCourseSearch.Text = reader("course").ToString
             Else
                 MsgBox("No Record")
             End If
 
         Catch ex As Exception
-            MsgBox(ex.Message)
+            MsgBox("yayayaya")
+
         Finally
             reader.Close()
 
