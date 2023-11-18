@@ -1,6 +1,7 @@
 ﻿Imports System.Security.Cryptography.X509Certificates
 Imports System.Windows.Forms.Design
 Imports K4os.Compression.LZ4.Streams
+Imports Microsoft.VisualBasic.Devices
 Imports MySql.Data.MySqlClient
 
 Module Module1
@@ -78,9 +79,9 @@ Module Module1
                 Form1.txtCourseSearch.Text = reader("course").ToString
                 Form1.btnUpdate.Enabled = True
                 Form1.btnDelete.Enabled = True
-                Form1.txtFName.Enabled = True
-                Form1.txtLName.Enabled = True
-                Form1.txtCourse.Enabled = True
+                Form1.txtFNameSearch.Enabled = True
+                Form1.txtLNameSearch.Enabled = True
+                Form1.txtCourseSearch.Enabled = True
             Else
                 MsgBox("No Record")
             End If
@@ -168,7 +169,7 @@ Module Module1
 
     Public Sub UpdateRecord(studid As String, fname As String, lname As String, course As String)
 
-        sqlquery = "UPDATE students  set studFname = @fname, studLname = @lname, course = @course WHERE studid = @studid"
+        sqlquery = "UPDATE students set studFname = @fname, studLname = @lname, course = @course WHERE studid = @studid"
 
         Try
             Using cmd As New MySqlCommand(sqlquery, con)
@@ -186,12 +187,37 @@ Module Module1
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, vbInformation, "Error Message")
         Finally
-            Form1.txtFName.Clear()
-            Form1.txtLName.Clear()
-            Form1.txtCourse.Clear()
+            Form1.txtFNameSearch.Clear()
+            Form1.txtLNameSearch.Clear()
+            Form1.txtCourseSearch.Clear()
             Form1.txtUserID.Clear()
 
         End Try
+    End Sub
+
+    Public Sub DeleteRecord(studid As String)
+
+        sqlquery = "DELETE FROM students WHERE studid = @studid"
+
+        Try
+            Using cmd As New MySqlCommand(sqlquery, con)
+                cmd.Parameters.AddWithValue("@studid", studid)
+                cmd.ExecuteNonQuery()
+
+            End Using
+
+            MsgBox("Deletion Successful", vbInformation, "Delete Message")
+
+        Catch ex As Exception
+            MsgBox("Error: " & ex.Message, vbInformation, "Error Message")
+        Finally
+            Form1.txtFNameSearch.Clear()
+            Form1.txtLNameSearch.Clear()
+            Form1.txtCourseSearch.Clear()
+            Form1.txtUserID.Clear()
+
+        End Try
+
     End Sub
 
 End Module
