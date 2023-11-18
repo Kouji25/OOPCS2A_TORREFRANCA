@@ -211,9 +211,6 @@ Module Module1
         Catch ex As Exception
             MsgBox("Error: " & ex.Message, vbInformation, "Error Message")
         Finally
-            Form1.txtFNameSearch.Clear()
-            Form1.txtLNameSearch.Clear()
-            Form1.txtCourseSearch.Clear()
             Form1.txtUserID.Clear()
 
         End Try
